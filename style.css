@@ -74,6 +74,10 @@ th {
   background: #95a5a6;
 }
 
+.data-deletion-link {
+  background: #e74c3c;
+}
+
 @media (max-width: 600px) {
   body {
     padding: 10px;
