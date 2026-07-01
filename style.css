@@ -196,3 +196,21 @@ th {
   font-size: 0.9em;
   color: #7f8c8d;
 }
+
+/* Keep link colors fixed regardless of visited state, so menu cards and the
+   home-table links never switch to the browser-default visited purple. */
+.menu-card,
+.menu-card:link,
+.menu-card:visited {
+  color: inherit;
+}
+
+.legal-link:link,
+.legal-link:visited {
+  color: white !important;
+}
+
+.nav-header a:link,
+.nav-header a:visited {
+  color: #3498db;
+}
