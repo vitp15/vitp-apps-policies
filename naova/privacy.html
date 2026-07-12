@@ -51,9 +51,13 @@
     <br /><strong>What information do you provide to the Application?</strong>
     <p>
       You do not create an account and you are not asked for your name, email,
-      or any identifier to use Naova. Everything you log is entered by you and
-      kept locally in the app's on-device database. You may export a backup file
-      yourself (see "Backups" below); you choose where that file goes.
+      or any identifier to use Naova's core features. Everything you log is
+      entered by you and kept locally in the app's on-device database. You may
+      export a backup file yourself (see "Backups" below); you choose where that
+      file goes. The one exception is the optional Cloud Backup feature (Naova
+      Plus), which asks you to sign in with Google (on Android) or Apple (on iOS)
+      only so your encrypted backup can be linked to you — see "Optional Cloud
+      Backup" below.
     </p>
 
     <br /><strong>Health &amp; sensitive data</strong>
@@ -103,9 +107,30 @@
       You may create a backup file of your data from within the app. The backup
       is generated on your device and handed to your operating system's share
       sheet, so <em>you</em> decide where it goes (for example your own Google
-      Drive, iCloud/Files, or email). The Service Provider does not receive or
+      Drive, iCloud/Files, or email). Unless you turn on the optional Cloud
+      Backup feature described next, the Service Provider does not receive or
       store your backup. Please keep your backup file somewhere private that only
       you can access.
+    </p>
+
+    <br /><strong>Optional Cloud Backup (Naova Plus)</strong>
+    <p>
+      Cloud Backup is an <strong>optional, off-by-default</strong> feature. If you
+      turn it on, Naova signs you in with <strong>Google (on Android) or Apple (on
+      iOS)</strong> — used only to link a backup to you — then
+      <strong>encrypts your data on your device</strong> and stores the encrypted
+      file on Google Firebase Cloud Storage. The data is encrypted with a key
+      derived from a <strong>recovery phrase that only you hold</strong>; the
+      Service Provider does not have that key and therefore
+      <strong>cannot read the contents of your backup</strong>. A pseudonymous
+      sign-in identifier is processed so your device can find and restore your own
+      backup. Backups run automatically when you leave the app (and only if
+      something changed) or when you tap "Back up now". You can turn Cloud Backup
+      off and delete the stored backup at any time from within the app. If you
+      never enable it, nothing is uploaded and the on-device-only behaviour above
+      applies. Please note that if you lose your recovery phrase, an encrypted
+      backup cannot be decrypted or recovered by anyone, including the Service
+      Provider.
     </p>
 
     <br /><strong
@@ -158,11 +183,14 @@
     >
     <p>
       The Service Provider does not sell your personal information. Your logged
-      health data is not shared with third parties. Limited data is processed by
-      the service providers strictly needed to run optional features — a weather
-      provider (coordinates only, when you use weather), anonymous diagnostics
-      (Firebase), and purchase management (RevenueCat and the app stores, if you
-      subscribe). Each has its own privacy policy:
+      health data is not shared with third parties in readable form; if you enable
+      Cloud Backup it is uploaded only in an <strong>encrypted</strong> form that
+      the storage provider cannot read. Limited data is processed by the service
+      providers strictly needed to run optional features — a weather provider
+      (coordinates only, when you use weather), anonymous diagnostics (Firebase),
+      purchase management (RevenueCat and the app stores, if you subscribe), and,
+      if you enable Cloud Backup, sign-in and encrypted storage (Firebase
+      Authentication and Firebase Cloud Storage). Each has its own privacy policy:
     </p>
     <ul>
       <li>
@@ -179,6 +207,14 @@
           target="_blank"
           rel="noopener noreferrer"
           >Firebase Crashlytics</a
+        >
+      </li>
+      <li>
+        <a
+          href="https://firebase.google.com/support/privacy"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Firebase Authentication &amp; Cloud Storage (optional Cloud Backup)</a
         >
       </li>
       <li>
@@ -252,8 +288,12 @@
     <p>
       Data you log stays on your device until you delete it or uninstall the
       Application. The Service Provider does not hold your health data on any
-      server. Pseudonymous diagnostic and analytics information is retained for
-      up to 24 months and thereafter may be kept only in aggregated form.
+      server in readable form. If you enable Cloud Backup, your
+      <strong>encrypted</strong> backup is retained until you delete it or turn
+      the feature off (the Service Provider keeps only the most recent few
+      encrypted copies so a bad backup can be recovered). Pseudonymous diagnostic
+      and analytics information is retained for up to 24 months and thereafter may
+      be kept only in aggregated form.
     </p>
 
     <br /><strong>International data transfers</strong>
@@ -301,7 +341,7 @@
       deemed acceptance of the changes.
     </p>
     <br />
-    <p>This privacy policy is effective as of 2026-07-01.</p>
+    <p>This privacy policy is effective as of 2026-07-12.</p>
 
     <br /><strong>How do you give your consent?</strong>
     <p>
