@@ -1,0 +1,112 @@
+body {
+  background-color: #f0f2f5;
+  margin: 0;
+  padding: 20px;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #2c3e50;
+  line-height: 1.5;
+  display: block;
+  max-width: 800px;
+  margin: 20px auto;
+  background: #ffffff;
+  padding: 50px 60px;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #dcdfe3;
+}
+
+strong:first-of-type {
+  display: block;
+  font-size: 28px;
+  color: #1a1a1a;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+strong {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: -10px;
+  font-size: 17px;
+  color: #34495e;
+}
+
+p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: justify;
+}
+
+br {
+  content: "";
+  margin: 5px 0;
+  display: block;
+}
+
+ul {
+  margin-top: 5px;
+  padding-left: 25px;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+a,
+a:visited,
+a:active {
+  color: #c7485f; /* pin all states so visited links don't turn default purple */
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.medical-note {
+  background: #fbe1e6;
+  border: 1px solid #f0c4cd;
+  border-left: 4px solid #c7485f;
+  border-radius: 6px;
+  padding: 12px 16px;
+  margin: 16px 0;
+}
+
+.nav-header {
+  padding: 0 0 15px 0;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #eee;
+  font-size: 0.95em;
+  color: #7f8c8d;
+}
+
+.nav-header a {
+  color: #c7485f;
+  font-weight: 600;
+}
+
+.nav-separator {
+  margin: 0 8px;
+  color: #ccc;
+}
+
+.current-page {
+  color: #2c3e50;
+  font-weight: bold;
+}
+
+.contact-button {
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 30px 20px;
+    margin: 0;
+    border: none;
+  }
+  strong:first-of-type {
+    font-size: 22px;
+  }
+}
